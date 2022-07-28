@@ -19,7 +19,9 @@ def Guest():
     prediction = model.predict(ct.transform(data))
     prediction = prediction[0][0]
     return render_template("index.html",y = "profit could be" + ' ' + str(prediction))
-app.run(debug = True)
+if __name__ == '__main__':
+
+    app.run(debug = True)
 
                            #@app.route('/user')
 #def user ():
